@@ -1,0 +1,37 @@
+﻿@model List<Contract>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="table-container">
+    <h1>Tipo de Contrato</h1>
+    <div class="input-container">
+        <input id="contract-input" />
+        <button id="submit-button" onclick="postContract()"><i class="fas fa-arrow-down"></i></button>
+    </div>
+    <table class="contracts-table">
+        <tr>
+            <th class="contract-type">Tipo<i class="fas fa-triangle"></i></th>
+            <th class="contract-state"><i class="fas fa-heart"></i></th>
+        </tr>
+        @foreach (var elemento in Model)
+        {
+            <tr>
+                <td>@elemento.Description</td>
+                <td>
+                    <input 
+                           class="state-input" 
+                           id="@elemento.Id" 
+                           type="checkbox" 
+                           @(elemento.ActiveState ? "checked='checked'" : "") 
+                           @($"onclick=updateSate('{elemento.Id}')")
+                    />
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+<script>
+    var ROOT = '@Url.Content("~")';
+</script>

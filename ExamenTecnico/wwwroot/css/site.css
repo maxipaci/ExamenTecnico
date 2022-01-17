@@ -1,0 +1,92 @@
+﻿html {
+    min-height: 100vh;
+    padding: 0
+}
+
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFCC99;
+    font-family: Arial
+}
+
+.table-container {
+    min-height: 100vh;
+    width: 90%;
+    text-align: center;
+    font-size: 2vw;
+}
+
+.contracts-table {
+    width: 100%;
+    border-spacing: 0;
+    background-color: white;
+    margin-top: 2%
+}
+
+h1{
+    font-size: 4vw;
+    display: block;
+    width: 100%;
+    text-align: start;
+    font-weight: 100
+}
+
+.input-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+#contract-input {
+    width: 75%;
+    margin: 0;
+    padding: 0;
+    font-size: 2vw
+}
+
+#submit-button {
+    width: 25%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-size: 2vw;
+    background-color: #FFCC99;
+}
+
+#submit-button {
+    font-size: 2em;
+}
+
+#submit-button:active {
+    color: blue;
+}
+
+
+.contract-type {
+    width: 75%;
+    background-color: #FF9966;
+    color: white;
+    font-weight: 100;
+    padding: 0.3%
+}
+
+.contract-state {
+    width: 25%;
+    color: #FF9966
+}
+th, td {
+    border: 0.5px solid #cccccc;
+}
+
+ td{
+     font-size: 0.8em
+ }
+
+.contract-type > i {
+    transform: rotate(180deg);
+    position: absolute;
+    right: 28%;
+}
